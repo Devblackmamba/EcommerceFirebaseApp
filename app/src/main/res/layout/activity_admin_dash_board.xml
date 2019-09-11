@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Admin.AdminDashBoard">
+
+    <RelativeLayout
+        android:id="@+id/admin_toolbar"
+        android:background="@color/fav_silver"
+        android:orientation="horizontal"
+        style="@style/Base.V7.Widget.AppCompat.Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageButton
+            android:layout_margin="10dp"
+            android:layout_centerVertical="true"
+            android:background="@color/fav_silver"
+            app:srcCompat="@drawable/androidapk"
+            android:layout_width="25dp"
+            android:layout_height="25dp" />
+
+
+
+        <ImageButton
+            android:id="@+id/btn_adminlogin"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            android:layout_centerVertical="true"
+            android:background="@color/fav_silver"
+            app:srcCompat="@drawable/ic_power_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_below="@id/admin_toolbar"
+        android:orientation="vertical"
+        android:weightSum="10"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Add Products"
+                android:layout_marginTop="10dp"
+                android:textColor="#9a9ba1"
+                android:layout_marginLeft="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_weight="5"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/btn_chair"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="70dp">
+
+                    <ImageView
+                        android:layout_centerInParent="true"
+                        app:srcCompat="@drawable/ic_chair"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:text="Chair"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:textAllCaps="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/btn_sofa"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="70dp">
+
+                    <ImageView
+                        android:layout_centerInParent="true"
+                        app:srcCompat="@drawable/ic_armchair"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:text="sofa"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:textAllCaps="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/btn_bed"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="70dp">
+
+                    <ImageView
+                        android:layout_centerInParent="true"
+                        app:srcCompat="@drawable/ic_bed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:text="bed"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:textAllCaps="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/btn_table"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="70dp">
+
+                    <ImageView
+                        android:layout_centerInParent="true"
+                        app:srcCompat="@drawable/ic_table"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:text="tables"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:textAllCaps="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/btn_closet"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="70dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerInParent="true"
+                        app:srcCompat="@drawable/ic_closet" />
+
+                    <TextView
+                        android:text="closet"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:textAllCaps="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:text="Order Requests"
+                android:layout_marginTop="20dp"
+                android:textColor="#9a9ba1"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btn_check_new_orders"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/gredient"
+                android:layout_marginTop="20dp"
+                android:text="check out new orders"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:text="Advertising"
+                android:layout_marginTop="20dp"
+                android:textColor="#9a9ba1"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btn_addadvertises"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="5dp"
+                    android:background="#68f181"
+                    android:layout_marginTop="20dp"
+                    android:text="Add Advertise"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/btn_viewadvertises"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="5dp"
+                    android:background="#9f74e1"
+                    android:layout_marginTop="20dp"
+                    android:text="Your Advertises"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:layout_marginRight="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

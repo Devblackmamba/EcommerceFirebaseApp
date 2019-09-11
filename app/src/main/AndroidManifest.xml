@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="e.pc7.ecommerceuser">
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:appCategory="productivity"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="e.pc7.ecommerceuser.MainActivity" />
+        <activity android:name="e.pc7.ecommerceuser.Activity.Admin.LoginActivity" />
+        <activity android:name="e.pc7.ecommerceuser.Activity.SelectCategory" />
+        <activity android:name="e.pc7.ecommerceuser.Activity.Admin.ProductofCategory" />
+        <activity
+            android:name="e.pc7.ecommerceuser.Activity.ShoppingSreenActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="e.pc7.ecommerceuser.Activity.ProductDetailActivity" />
+        <activity android:name="e.pc7.ecommerceuser.Activity.ActivityUserRegistration" />
+        <activity android:name="e.pc7.ecommerceuser.Activity.ActivityUserLogin" />
+        <activity android:name="e.pc7.ecommerceuser.Activity.SplashScreen">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity android:name="e.pc7.ecommerceuser.Activity.SettingsActivity" />
+        <activity android:name="e.pc7.ecommerceuser.Activity.ChangePofile" />
+        <activity android:name="e.pc7.ecommerceuser.Activity.CartActivity" />
+        <activity android:name="e.pc7.ecommerceuser.Activity.Admin.AdminDashBoard">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity android:name="e.pc7.ecommerceuser.Activity.Admin.AdminViewMap" />
+        <activity android:name="e.pc7.ecommerceuser.Activity.SetDeliveryLocation" />
+
+        <uses-library android:name="com.google.android.maps" />
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="googlemapapikey" />
+
+        <activity android:name="e.pc7.ecommerceuser.Activity.Admin.CheckNewOrder" />
+        <activity android:name="e.pc7.ecommerceuser.Activity.ConfirmFinalorderactivity" />
+        <activity android:name="e.pc7.ecommerceuser.Activity.Admin.UsersProductActivity" />
+        <activity android:name="e.pc7.ecommerceuser.Activity.SearchProduct" />
+        <activity
+            android:name="e.pc7.ecommerceuser.Activity.MapsActivity"
+            android:label="@string/title_activity_maps" />
+        <activity android:name="e.pc7.ecommerceuser.Activity.Admin.ViewAdvertises" />
+        <activity android:name="e.pc7.ecommerceuser.Activity.Admin.AddAdvertisings"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="e.pc7.ecommerceuser.Activity.SearchProduct">
+
+    <LinearLayout
+        android:weightSum="10"
+        android:background="@color/fav_silver"
+        android:orientation="horizontal"
+        style="@style/Base.V7.Widget.AppCompat.Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/ll_intent_searchproduct"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal"
+                style="@style/Base.V7.Widget.AppCompat.Toolbar"
+                android:layout_margin="10dp"
+                android:weightSum="10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_search"
+                    style="@style/Base.Widget.AppCompat.ActionButton"
+                    android:layout_weight="7"
+                    android:hint="search product"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/btn_searchproduct"
+                    android:layout_weight="3"
+                    android:text="search"
+                    android:background="#f26565"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/searched_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    </android.support.v7.widget.RecyclerView>
+
+
+</LinearLayout>

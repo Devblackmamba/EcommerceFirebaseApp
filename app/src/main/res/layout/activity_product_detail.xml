@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:backgroundTint="#fff"
+    android:layout_height="match_parent"
+    tools:context=".Activity.ProductDetailActivity">
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_above="@id/add_viewedproduct"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+           <LinearLayout
+       android:layout_margin="10dp"
+       android:weightSum="2"
+       android:orientation="horizontal"
+       android:layout_width="match_parent"
+       android:layout_height="170dp">
+
+       <ImageView
+           android:id="@+id/product_detailimage"
+           android:layout_weight="1"
+           android:src="@drawable/chair"
+           android:layout_width="0dp"
+           android:layout_height="match_parent" />
+
+       <RelativeLayout
+           android:layout_width="0dp"
+           android:layout_weight="1"
+           android:layout_height="match_parent">
+
+           <TextView
+               android:id="@+id/productdetail_name"
+               android:layout_marginTop="10dp"
+               android:text="productname"
+               android:layout_centerHorizontal="true"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content" />
+
+           <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+               android:id="@+id/elegantnumberbutton"
+               android:layout_width="100dp"
+               android:layout_centerInParent="true"
+               android:layout_height="35dp">
+
+           </com.cepheuen.elegantnumberbutton.view.ElegantNumberButton>
+
+
+
+       </RelativeLayout>
+
+   </LinearLayout>
+
+           <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="50 % off on this product"
+            android:textSize="15dp"
+            android:textColor="#000"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/productdetail_discount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="@string/rupee"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/productdetail_price"
+                android:text="1500"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+
+           <TextView
+        android:textAllCaps="true"
+        android:textSize="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:text="Product discription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+          <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/ic_fiber_manual_record_black_24dp"
+            android:layout_width="15dp"
+            android:layout_height="15dp" />
+
+        <TextView
+            android:id="@+id/productdetail_discription"
+            android:textAllCaps="true"
+            android:textSize="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:text="@string/lorem_ipsum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/title_see_review"
+            android:textAllCaps="true"
+            android:textSize="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:text="See Customer Review "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_reviews"
+            android:layout_below="@id/title_see_review"
+            android:layout_above="@id/tv_add_review_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+
+
+        <TextView
+            android:id="@+id/tv_add_review_btn"
+            android:text=" Add review"
+            android:layout_margin="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+       </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+
+    <Button
+        android:text="add product"
+        android:background="#e97272"
+        android:textColor="#fff"
+        android:id="@+id/add_viewedproduct"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</RelativeLayout>

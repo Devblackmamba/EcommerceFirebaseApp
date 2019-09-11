@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Activity.SetDeliveryLocation">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/cordinator_location_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/map_bar"
+            android:layout_width="match_parent"
+            android:layout_height="350dp">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/location_collapsing_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:contentScrim="?attr/colorPrimary"
+                app:expandedTitleMarginStart="5dp"
+                app:expandedTitleTextAppearance="@style/CollapsingToolbarLayoutExpandedTextStyle"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:title="Set delivery location">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <fragment
+                        android:id="@+id/customer_map"
+                        android:name="com.google.android.gms.maps.SupportMapFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <com.rodolfonavalon.shaperipplelibrary.ShapeRipple
+                        android:id="@+id/location_pulse"
+                        android:layout_width="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_height="wrap_content" />
+
+
+                    <ImageView
+                        android:layout_centerInParent="true"
+                        app:srcCompat="@drawable/ic_map_marker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+
+
+                <!--toolbar-->
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+        </android.support.design.widget.AppBarLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFF"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#e2dede" />
+
+            <android.support.v4.widget.NestedScrollView
+                android:id="@+id/nested_scroll_deliveryform"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:scrollbarStyle="insideInset">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/delivery_title_holder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:textStyle="bold"
+                            android:textSize="10dp"
+                            android:textAllCaps="true"
+                            android:id="@+id/tv_skip"
+                            android:visibility="gone"
+                            android:text="Skip" />
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/tv_location"
+                        android:hint="LOCATION"
+                        style="@style/Base.Widget.AppCompat.ActionButton"
+                        android:textAllCaps="true"
+                        android:text="Identifying location ..."
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:editable="false"
+                        android:singleLine="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_centerVertical="true"
+                        android:textColor="#000" />
+
+                    <LinearLayout
+                        android:id="@+id/location_additional_layout"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:id="@+id/tv_area"
+                            android:hint="AREA"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/Base.Widget.AppCompat.ActionButton"
+                            android:textSize="12dp"
+                            android:textAllCaps="true"
+                            android:textColorHint="#2f3a51"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_centerVertical="true"
+                            android:textColor="#000"/>
+
+                        <EditText
+                            android:id="@+id/tv_house_flat"
+                            android:layout_marginTop="20dp"
+                            android:hint="HOUSE/FLAT NO."
+                            android:textAllCaps="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="12dp"
+                            style="@style/Base.Widget.AppCompat.ActionButton"
+                            android:textColorHint="#2f3a51"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_centerVertical="true"
+                            android:textColor="#000"/>
+                        <EditText
+                            android:id="@+id/tv_landmark"
+                            android:layout_marginTop="20dp"
+                            android:hint="LANDMARK"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="12dp"
+                            style="@style/Base.Widget.AppCompat.ActionButton"
+                            android:textAllCaps="true"
+                            android:textColorHint="#2f3a51"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_centerVertical="true"
+                            android:textColor="#000"/>
+                        <View
+                            android:layout_marginTop="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#e2dede" />
+
+
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <Button
+                                android:id="@+id/btn_save_address"
+                                android:textColor="#fff"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"
+                                android:text="Save ADDRESS"
+                                android:textAllCaps="true"
+                                style="@style/Base.Widget.AppCompat.ActionButton"
+                                android:background="@drawable/gredient"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v4.widget.NestedScrollView>
+        </RelativeLayout>
+    </android.support.design.widget.CoordinatorLayout>
+
+</RelativeLayout>

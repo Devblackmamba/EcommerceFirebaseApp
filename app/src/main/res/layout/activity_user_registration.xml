@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".Activity.ActivityUserRegistration">
+
+
+    <LinearLayout
+        android:layout_margin="25dp"
+        android:orientation="horizontal"
+        style="@style/Base.V26.Widget.AppCompat.Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_gravity="clip_vertical"
+            android:src="@drawable/androidapk"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+
+        <TextView
+            android:textColor="#423550"
+            android:layout_marginLeft="8dp"
+            android:text="Register on mueble"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <EditText
+        style="@style/Base.V26.Widget.AppCompat.Toolbar"
+        android:id="@+id/et_newpersonname"
+        android:hint="name"
+        android:maxLines="1"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        style="@style/Base.V26.Widget.AppCompat.Toolbar"
+        android:id="@+id/et_newusername"
+        android:maxLines="1"
+        android:hint="username"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        style="@style/Base.V26.Widget.AppCompat.Toolbar"
+        android:id="@+id/et_newuserpassword"
+        android:hint="password"
+        android:maxLines="1"
+        android:inputType="textPassword"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        style="@style/Base.V26.Widget.AppCompat.Toolbar"
+        android:id="@+id/et_newuserphonenumber"
+        android:hint="phone number"
+        android:inputType="phone"
+        android:maxLines="1"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:background="@drawable/gredient"
+        android:id="@+id/btn_signup"
+        android:layout_margin="10dp"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:text="Sign up"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
